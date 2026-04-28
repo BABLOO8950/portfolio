@@ -9,204 +9,292 @@ export default function App() {
     "Node JS",
     "Express JS",
     "MongoDB",
+    "Tailwind CSS",
+    "Git & GitHub",
+    "REST API",
+    "JWT Authentication",
+    "Responsive Design",
+  ];
+
+  const techUsed = [
+    "React JS",
+    "Node JS",
+    "Express JS",
+    "MongoDB",
+    "JWT Auth",
+    "REST API",
+    "Tailwind CSS",
     "GitHub",
   ];
 
-  const projects = [
-    {
-      title: "E-Commerce Website",
-      desc: "Full MERN stack e-commerce website with admin panel, JWT auth, products and orders management.",
-    },
-    {
-      title: "Portfolio Website",
-      desc: "Modern animated personal portfolio built in React for recruiters and LinkedIn.",
-    },
-  ];
-
   return (
-    <div className="h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className="bg-slate-950 text-white scroll-smooth">
 
-      {/* Resume Button */}
-      <div className="fixed top-4 right-4 z-50">
+      {/* DOWNLOAD CV BUTTON */}
+      <div className="fixed top-5 right-5 z-50">
         <a
           href="/resume.pdf"
-          className="bg-white text-black px-4 py-2 rounded-xl font-semibold shadow-lg"
+          download
+          className="bg-cyan-500 hover:bg-cyan-400 text-black px-5 py-3 rounded-xl font-semibold shadow-xl duration-300"
         >
           Download CV
         </a>
       </div>
 
       {/* HERO SECTION */}
-      <motion.section
-        initial={{ opacity: 0, y: 80 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="min-h-screen snap-start flex items-center justify-center px-6"
-      >
-        <div className="max-w-5xl grid md:grid-cols-2 gap-10 items-center">
+      <section className="min-h-screen flex items-center px-6 md:px-14">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
 
-          <div>
-            <p className="text-cyan-400 tracking-widest text-sm">
-              MERN STACK DEVELOPER
+          {/* LEFT */}
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <p className="text-cyan-400 tracking-[4px] text-sm font-semibold">
+              FULL STACK WEB DEVELOPER
             </p>
 
-            <h1 className="text-5xl md:text-7xl font-bold mt-4">
+            <h1 className="text-5xl md:text-7xl font-bold mt-5 leading-tight">
               Babloo
             </h1>
 
-            <p className="text-xl mt-3 text-cyan-300 animate-pulse">
-              Building Modern Web Experiences 🚀
+            <h2 className="text-2xl md:text-4xl text-slate-300 mt-4 font-semibold">
+              MERN Stack Developer
+            </h2>
+
+            <p className="text-slate-400 mt-8 leading-8 text-lg">
+              Passionate and dedicated MERN Stack Developer with hands-on
+              experience in building responsive, scalable and user-friendly
+              web applications using modern technologies.
             </p>
 
-            <p className="mt-5 text-slate-300 leading-7">
-              BSc Computer Science student from Pinjore with hands-on
-              experience in MongoDB, Express, React and Node.js.
+            <p className="text-slate-400 mt-6 leading-8 text-lg">
+              Completed 8 months internship at Excellence Technology,
+              Chandigarh where I worked on live projects and real client
+              requirements.
             </p>
 
-            <div className="mt-7 flex gap-4 flex-wrap">
+            <div className="mt-10 flex gap-4 flex-wrap">
               <a
                 href="#projects"
-                className="bg-cyan-500 px-5 py-3 rounded-xl font-semibold"
+                className="bg-cyan-500 hover:bg-cyan-400 px-6 py-3 rounded-xl font-semibold"
               >
-                View Projects ↓
+                View Projects
               </a>
 
               <a
-                href="#contact"
-                className="border border-slate-500 px-5 py-3 rounded-xl"
+                href="/resume.pdf"
+                download
+                className="border border-slate-600 hover:border-cyan-400 px-6 py-3 rounded-xl"
               >
-                Contact Me ↓
+                Download Resume
+              </a>
+
+              <a
+                href="https://github.com/BABLOO8950"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-slate-600 hover:border-cyan-400 px-6 py-3 rounded-xl"
+              >
+                GitHub
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="bg-slate-800 p-8 rounded-3xl shadow-2xl">
-            <h2 className="text-2xl font-bold mb-5">Quick CV</h2>
+          {/* RIGHT */}
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="bg-slate-900 p-8 rounded-3xl shadow-2xl border border-slate-800"
+          >
+            <h3 className="text-3xl font-bold mb-8 text-cyan-400">
+              Professional Summary
+            </h3>
 
-            <p>📍 Pinjore / Panchkula</p>
-            <p className="mt-2">🎓 DAV College Chandigarh</p>
-            <p className="mt-2">💼 Fresher MERN Developer</p>
-            <p className="mt-2">📧 idbabloo3@gmail.com</p>
-            <p className="mt-2">📞 +91 8950914289</p>
-          </div>
-
+            <div className="space-y-5 text-lg text-slate-300">
+              <p>📍 Location: Pinjore / Panchkula / Chandigarh</p>
+              <p>🎓 Education: BSc Computer Science</p>
+              <p>🏫 College: DAV College Chandigarh</p>
+              <p>💼 Role: MERN Stack Developer</p>
+              <p>🏢 Internship: 8 Months Experience</p>
+              <p>🏢 Company: Excellence Technology</p>
+              <p>📧 Email: idbabloo3@gmail.com</p>
+              <p>📱 Phone: +91 8950914289</p>
+              <p>🌐 Status: Open to Work</p>
+            </div>
+          </motion.div>
         </div>
-      </motion.section>
+      </section>
+
+      {/* EXPERIENCE */}
+      <section className="py-28 px-6 md:px-14 bg-slate-900">
+        <div className="max-w-7xl mx-auto">
+
+          <h2 className="text-5xl font-bold text-center mb-16">
+            Professional Experience
+          </h2>
+
+          <div className="bg-slate-800 p-10 rounded-3xl border border-slate-700 shadow-xl">
+            <div className="flex flex-col md:flex-row md:justify-between gap-4">
+              <div>
+                <h3 className="text-3xl font-bold text-cyan-400">
+                  MERN Stack Intern
+                </h3>
+
+                <p className="text-xl text-slate-300 mt-2">
+                  Excellence Technology, Chandigarh
+                </p>
+              </div>
+
+              <p className="text-slate-400 text-lg">
+                8 Months Internship
+              </p>
+            </div>
+
+            <p className="mt-8 text-slate-300 text-lg leading-8">
+              Completed professional internship where I worked on live
+              development projects and gained real-world experience in
+              frontend and backend development.
+            </p>
+
+            <p className="mt-5 text-slate-300 text-lg leading-8">
+              Worked on React.js UI development, backend APIs using Node.js
+              and Express.js, database operations using MongoDB and debugging
+              production level applications.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* SKILLS */}
-      <motion.section
-        initial={{ opacity: 0, y: 80 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="min-h-screen snap-start flex flex-col justify-center px-6"
-      >
-        <div className="max-w-5xl mx-auto w-full">
-          <h2 className="text-4xl font-bold mb-10">Skills</h2>
+      <section className="py-28 px-6 md:px-14 bg-slate-950">
+        <div className="max-w-7xl mx-auto">
 
-          <div className="flex flex-wrap gap-4">
+          <h2 className="text-5xl font-bold text-center mb-16">
+            Technical Skills
+          </h2>
+
+          <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-6">
             {skills.map((item, index) => (
               <div
                 key={index}
-                className="bg-slate-800 px-5 py-3 rounded-xl shadow-lg hover:scale-105 duration-300"
+                className="bg-slate-800 hover:bg-slate-700 duration-300 p-5 rounded-2xl text-center text-lg font-medium shadow-lg"
               >
                 {item}
               </div>
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* PROJECTS */}
-      <motion.section
+      <section
         id="projects"
-        initial={{ opacity: 0, y: 80 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="min-h-screen snap-start flex flex-col justify-center px-6"
+        className="py-28 px-6 md:px-14 bg-slate-900"
       >
-        <div className="max-w-5xl mx-auto w-full">
+        <div className="max-w-7xl mx-auto">
 
-          <div className="flex justify-between items-center mb-10 flex-wrap gap-4">
-            <h2 className="text-4xl font-bold">Projects</h2>
+          <h2 className="text-5xl font-bold text-center mb-16">
+            Featured Project
+          </h2>
 
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+
+            {/* LEFT */}
+            <div className="bg-slate-800 p-10 rounded-3xl border border-slate-700 shadow-xl">
+              <h3 className="text-4xl font-bold text-cyan-400">
+                E-Commerce Website
+              </h3>
+
+              <p className="mt-6 text-slate-300 text-lg leading-8">
+                Developed a complete MERN Stack E-Commerce website with
+                secure JWT authentication, product listing, cart system,
+                order management and admin dashboard.
+              </p>
+
+              <p className="mt-5 text-slate-300 text-lg leading-8">
+                Users can browse products, place orders and manage accounts.
+                Admin can add, update, delete products and track orders.
+              </p>
+
+              <a
+                href="https://github.com/BABLOO8950"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-8 bg-cyan-500 hover:bg-cyan-400 px-6 py-3 rounded-xl font-semibold"
+              >
+                View Source Code
+              </a>
+            </div>
+
+            {/* RIGHT */}
+            <div className="bg-slate-800 p-10 rounded-3xl border border-slate-700 shadow-xl">
+              <h3 className="text-3xl font-bold mb-8">
+                Technologies Used
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+                {techUsed.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-slate-700 p-4 rounded-xl text-center"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="py-14 px-6 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto text-center">
+
+          <h3 className="text-3xl font-bold">
+            Babloo
+          </h3>
+
+          <p className="text-slate-400 mt-4">
+            MERN Stack Developer | Open for Opportunities
+          </p>
+
+          <div className="mt-6 flex justify-center gap-6 flex-wrap">
             <a
-              href="https://github.com/"
+              href="mailto:idbabloo3@gmail.com"
               className="text-cyan-400"
             >
-              View GitHub →
+              Email
+            </a>
+
+            <a
+              href="https://github.com/BABLOO8950"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-400"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="/resume.pdf"
+              download
+              className="text-cyan-400"
+            >
+              Resume
             </a>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((item, index) => (
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                key={index}
-                className="bg-slate-800 p-6 rounded-3xl shadow-xl"
-              >
-                <h3 className="text-2xl font-bold">{item.title}</h3>
-
-                <p className="text-slate-300 mt-4 leading-7">
-                  {item.desc}
-                </p>
-
-                <div className="mt-6 flex gap-3">
-                  <button className="bg-cyan-500 px-4 py-2 rounded-xl">
-                    Live Demo
-                  </button>
-
-                  <button className="border px-4 py-2 rounded-xl">
-                    Code
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <p className="text-slate-500 mt-8 text-sm">
+            © 2026 Babloo. All Rights Reserved.
+          </p>
 
         </div>
-      </motion.section>
-
-      {/* CONTACT */}
-      <motion.section
-        id="contact"
-        initial={{ opacity: 0, y: 80 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="min-h-screen snap-start flex flex-col justify-center px-6"
-      >
-        <div className="max-w-4xl mx-auto w-full">
-
-          <h2 className="text-4xl font-bold mb-10">
-            Contact Me
-          </h2>
-
-          <div className="bg-slate-800 p-8 rounded-3xl shadow-xl">
-
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full p-4 rounded-xl bg-slate-900 mb-4 outline-none"
-            />
-
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full p-4 rounded-xl bg-slate-900 mb-4 outline-none"
-            />
-
-            <textarea
-              rows="5"
-              placeholder="Your Message"
-              className="w-full p-4 rounded-xl bg-slate-900 mb-4 outline-none"
-            ></textarea>
-
-            <button className="bg-cyan-500 px-6 py-3 rounded-xl font-semibold">
-              Send Message
-            </button>
-
-          </div>
-        </div>
-      </motion.section>
+      </footer>
     </div>
   );
 }
