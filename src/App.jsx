@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import './assets/babloo-resume.pdf (1).pdf'
 export default function App() {
   const skills = [
     "HTML",
@@ -33,7 +32,7 @@ export default function App() {
       {/* DOWNLOAD CV BUTTON */}
       <div className="fixed top-5 right-5 z-50">
         <a
-          href="/babloo-resume.pdf(1).pdf"
+        href="/BablooCV.pdf"
           download
           className="bg-cyan-500 hover:bg-cyan-400 text-black px-5 py-3 rounded-xl font-semibold shadow-xl duration-300"
         >
@@ -84,7 +83,7 @@ export default function App() {
               </a>
 
               <a
-                href="/babloo-resume.pdf(1).pdf"
+              href="/BablooCV.pdf"
                 download
                 className="border border-slate-600 hover:border-cyan-400 px-6 py-3 rounded-xl"
               >
