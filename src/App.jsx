@@ -29,16 +29,7 @@ export default function App() {
   return (
     <div className="bg-slate-950 text-white scroll-smooth">
 
-      {/* DOWNLOAD CV BUTTON */}
-      <div className="fixed top-5 right-5 z-50">
-        <a
-        href="/BablooCV.pdf"
-          download
-          className="bg-cyan-500 hover:bg-cyan-400 text-black px-5 py-3 rounded-xl font-semibold shadow-xl duration-300"
-        >
-          Download CV
-        </a>
-      </div>
+     
 
       {/* HERO SECTION */}
       <section className="min-h-screen flex items-center px-6 md:px-14">
